@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Converter } from "@/components/converter/converter";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Faq } from "@/components/home/faq";
+import { NativeBanner } from "@/components/ads/native-banner";
 import { siteConfig } from "@/lib/config/site";
 import { TOOL_PAGES, type ToolPageContent } from "@/lib/content/tool-pages";
 import { breadcrumbJsonLd, webApplicationJsonLd } from "@/lib/seo/structured-data";
@@ -56,6 +57,11 @@ export function ToolPage({ page }: { page: ToolPageContent }) {
             {page.tips.map((t) => <li key={t}>{t}</li>)}
           </ul>
         </section>
+
+        {/* Ad between tips and related converters */}
+        <div className="flex justify-center py-2">
+          <NativeBanner />
+        </div>
 
         <section aria-labelledby="related-title">
           <h2 id="related-title" className="text-2xl font-semibold tracking-tight">Related converters</h2>

@@ -5,6 +5,7 @@ import { Features } from "@/components/home/features";
 import { Hero } from "@/components/home/hero";
 import { HowItWorks } from "@/components/home/how-it-works";
 import { UseCases } from "@/components/home/use-cases";
+import { NativeBanner } from "@/components/ads/native-banner";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/config/site";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -21,6 +22,9 @@ export default function HomePage() {
     <>
       <JsonLd data={webApplicationJsonLd("/", `${siteConfig.name} Image to SVG Converter`)} />
       <Hero />
+      <div className="flex justify-center border-b py-6">
+        <NativeBanner />
+      </div>
       <Features />
       <HowItWorks />
       <Examples />
