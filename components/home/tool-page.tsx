@@ -34,6 +34,11 @@ export function ToolPage({ page }: { page: ToolPageContent }) {
         </div>
       </section>
 
+      {/* Ad slot: right after the converter, before the guide content — high-attention moment */}
+      <div className="border-b bg-muted/20 py-8">
+        <NativeBanner />
+      </div>
+
       <div className="mx-auto max-w-3xl space-y-12 px-4 py-14 sm:px-6">
         <section aria-labelledby="steps-title">
           <h2 id="steps-title" className="text-2xl font-semibold tracking-tight">How to use the {page.navLabel} converter</h2>
@@ -57,11 +62,6 @@ export function ToolPage({ page }: { page: ToolPageContent }) {
             {page.tips.map((t) => <li key={t}>{t}</li>)}
           </ul>
         </section>
-
-        {/* Ad between tips and related converters */}
-        <div className="flex justify-center py-2">
-          <NativeBanner />
-        </div>
 
         <section aria-labelledby="related-title">
           <h2 id="related-title" className="text-2xl font-semibold tracking-tight">Related converters</h2>

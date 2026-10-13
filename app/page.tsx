@@ -22,7 +22,7 @@ export default function HomePage() {
     <>
       <JsonLd data={webApplicationJsonLd("/", `${siteConfig.name} Image to SVG Converter`)} />
       <Hero />
-      <div className="flex justify-center border-b py-6">
+      <div className="border-b border-t py-8 bg-muted/20">
         <NativeBanner />
       </div>
       <Features />

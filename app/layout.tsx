@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
-import { SocialBar } from "@/components/ads/social-bar";
-import { Popunder } from "@/components/ads/popunder";
 import { siteConfig } from "@/lib/config/site";
 import "./globals.css";
 
@@ -41,8 +39,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <a href="#main" className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
             Skip to content
           </a>
-          <SocialBar />
-          <Popunder />
           <Header />
           <main id="main" className="flex-1">{children}</main>
           <Footer />
